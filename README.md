@@ -1,6 +1,6 @@
 # APPLE CALCULATOR 
 
-![alt text](https://github.com/Dramane-dev/apple-calculator/blob/master/calculator.jpg?raw=true)
+![alt text](https://github.com/Dramane-dev/apple-calculator/blob/master/calculator.png?raw=true)
 
 
 ## Features

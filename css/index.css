@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    width: 90%;
+    border-radius: 5px;
+    font-size: calc(24px + (72 - 24) * ((100vw - 300px) / (1600 - 300)));
+    background-color: black;
+    color: #ECEFF1;
+}
+
+.screen {
+    display: flex;
+    justify-content: flex-end;
+    height: 20vh;
+    border: 1px solid #ECEFF155;
+}
+
+.screen > span {
+    font-size: 2em;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1vh;
+    height: 80%;
+}
+
+.keys > *{
+    display: flex;
+    justify-content: center;
+    border-radius: 5%;
+    transition: 0.5s;
+}
+
+.keys > *:hover {
+    filter: brightness(120%);
+}
+
+.keys > *:active {
+    filter: brightness(150%);
+}
+
+div[data-key="AC"] {
+    grid-column: 1/4;
+}
+  
+div[data-key="0"] {
+  grid-column: 1/3;
+}
+
+
+.digit {
+  background: #37474F;
+}
+
+.operator {
+  background: #FF9100;
+}
+
+.clear {
+  background: #90A4AE;
+  color: #263238;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px){ 
+    .calculator {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px){ 
+    .calculator {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px){ 
+    .calculator {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){ 
+    .calculator {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px){ 
+    .calculator {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px){ 
+    .calculator {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 280px) and (max-device-width: 653px){ 
+    .calculator {
+        width: 100%;
+    }
+}

@@ -9,10 +9,10 @@ let nums = {
     operator: null
 }
 
-
 let displayValue = key => {
     let regex = new RegExp(/(?:[. \d])/, 'g');
 
+    // Manage case where user click on digit, '0.00' should be hidden
     if (variables.screen.innerText === '0.00') {
         variables.screen.innerText = '';
     } else {
@@ -54,9 +54,13 @@ let displayValue = key => {
 }
 
 let operations = (num1, operator, num2) => {
-    console.log('first num ' + num1);
-    console.log('OPERATOR ' + operator);
-    console.log('second num ' + num2);
+    
+    // Manage case where user click on equals before click a digit
+    if (num1.toString().length === 0) {
+        num1 = 0.00;
+    } else if (num2.toString().length === 0) {
+        num2 = 0.00;
+    }
 
     switch (true) {
         case operator === '+':
@@ -72,13 +76,11 @@ let operations = (num1, operator, num2) => {
             result = parseFloat(num1) / parseFloat(num2);
             break;
         default:
-            console.log('in default case ')
             result = 0.00;
             break;
     }
 
-    console.log(' = ' + result);
-    variables.screen.textContent = result;
+    variables.screen.textContent = result === 0 ? '0.00' : result;
     temporary = result;
     nums.num1 = 0;
     nums.num2 = 0;

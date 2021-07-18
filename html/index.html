@@ -13,11 +13,11 @@
 </head>
 <body>
     <div class="calculator">
-        <div class="screen">
+        <div id="screen" class="screen">
             <span>0.00</span>
         </div>
-        <div class="keys">
-            <div data-key="AC" class="clear">AC</div>
+        <div id="keys" class="keys">
+            <div data-key="AC" id="clear" class="clear">AC</div>
             <div data-key="/" class="operator">/</div>
             <div data-key="7" class="digit">7</div>
             <div data-key="8" class="digit">8</div>
@@ -33,10 +33,10 @@
             <div data-key="+" class="operator">+</div>
             <div data-key="0" class="digit">0</div>
             <div data-key="." class="digit">,</div>
-            <div data-key="=" class="operator">=</div>
+            <div data-key="=" id="equals" class="operator">=</div>
         </div>
     </div>
     
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js" type="module"></script>
 </body>
 </html>
